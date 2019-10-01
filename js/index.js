@@ -67,7 +67,7 @@ function zoom(event) {
 
 
 
-//create bus (spacebar) keypress
+//create bus ) keypress
 
 
 const footer = document.querySelector('footer');
@@ -82,9 +82,10 @@ function create(thing){
     newBus.addEventListener('click', event => {
     newBus.remove();
     })
-    
+    TweenLite.to(newBus, 20, {y:-1000});
+    TweenLite.to(newBus, 10, {x:500});
 }
-
+ 
 //focus event and blur
 
 
