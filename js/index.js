@@ -144,10 +144,24 @@ const botButton = document.querySelectorAll('.destination .btn').forEach(el => {
 el.addEventListener("mouseenter", () => {
     el.style.transform = "scale(3)";
     el.style.transition = "all 0.3s"
+    TweenMax.to(el,1, {
+        rotation: -90,
+        filter: 'none',
+        ease: Elastic.easeOut.config( 1, 0.75),
+        yoyo: true,
+        repeat: 2
+      })
     })
     el.addEventListener("mouseleave", () => {
     el.style.transform = "scale(1.0)";
     el.style.transition = "all 0.3s"
+    TweenMax.to(el,1, {
+        rotation: 0,
+        filter: 'none',
+        ease: Elastic.easeOut.config( 1, 0.75),
+        yoyo: true,
+        repeat: 2
+      })
     })
 })
 
@@ -157,6 +171,9 @@ let htmlBackground = document.querySelector('html');
 
 htmlBackground.addEventListener('pointermove', (event) => {
     
+
+  
+
     htmlBackground.style.color = "purple"
 })
 
